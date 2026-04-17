@@ -12,9 +12,9 @@ export function createTestimonialsSection(content) {
       createContainer([
         createSectionHeader({
           eyebrow: "Testimonials",
-          title: "Trusted by Growth-Focused Teams",
+          title: "Trusted By Teams That Need Pipeline Growth",
           description:
-            "Built as a scalable section so new social proof can be added quickly without layout changes."
+            "Proof that strategy, execution speed, and conversion focus can coexist."
         }),
         createElement("div", {
           className: "testimonial-grid",

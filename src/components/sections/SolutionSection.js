@@ -2,25 +2,24 @@ import { createSectionHeader } from "../shared/SectionHeader.js";
 import { createInfoCard } from "../shared/InfoCard.js";
 import { createContainer, createElement } from "../../utils/dom.js";
 
-export function createServicesSection(content) {
-  const cards = content.services.map((service, index) =>
-    createInfoCard(service, "service", 180 + index * 80)
+export function createSolutionSection(content) {
+  const pillars = content.solution.pillars.map((item, index) =>
+    createInfoCard(item, "solution", 170 + index * 70)
   );
 
   return createElement("section", {
     className: "section section--light",
-    attrs: { id: "services" },
+    attrs: { id: "solution" },
     children: [
       createContainer([
         createSectionHeader({
-          eyebrow: "Services",
-          title: "What We Do To Drive Qualified Leads",
-          description:
-            "Every service is designed to move one KPI: more high-intent leads from the traffic you already pay for."
+          eyebrow: "The Skyline Solution",
+          title: content.solution.title,
+          description: content.solution.description
         }),
         createElement("div", {
           className: "card-grid card-grid--three",
-          children: cards
+          children: pillars
         })
       ])
     ]

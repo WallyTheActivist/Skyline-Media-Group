@@ -12,9 +12,9 @@ export function createProcessSection(content) {
       createContainer([
         createSectionHeader({
           eyebrow: "Process",
-          title: "Tracer Bullet Execution Model",
+          title: "Tracer Bullet Growth Process",
           description:
-            "We start with a focused, working path to value, then refine with data and customer feedback.",
+            "Start simple, ship quickly, test in market, and refine using live performance signals.",
           centered: true
         }),
         createElement("div", {

@@ -1,8 +1,10 @@
 import { siteContent } from "./content/siteContent.js";
 import { createHeroSection } from "./components/sections/HeroSection.js";
+import { createProblemSection } from "./components/sections/ProblemSection.js";
+import { createSolutionSection } from "./components/sections/SolutionSection.js";
 import { createServicesSection } from "./components/sections/ServicesSection.js";
+import { createResultsSection } from "./components/sections/ResultsSection.js";
 import { createWhySection } from "./components/sections/WhySection.js";
-import { createPortfolioSection } from "./components/sections/PortfolioSection.js";
 import { createProcessSection } from "./components/sections/ProcessSection.js";
 import { createTestimonialsSection } from "./components/sections/TestimonialsSection.js";
 import { createFinalCtaSection } from "./components/sections/FinalCtaSection.js";
@@ -57,10 +59,12 @@ function buildPage() {
     attrs: { id: "main-content" },
     children: [
       createHeroSection(siteContent),
+      createProblemSection(siteContent),
+      createSolutionSection(siteContent),
       createServicesSection(siteContent),
-      createWhySection(siteContent),
-      createPortfolioSection(siteContent),
+      createResultsSection(siteContent),
       createProcessSection(siteContent),
+      createWhySection(siteContent),
       createTestimonialsSection(siteContent),
       createFinalCtaSection(siteContent),
       createContactSection(siteContent)

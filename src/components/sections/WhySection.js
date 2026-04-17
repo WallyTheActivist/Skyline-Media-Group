@@ -14,9 +14,9 @@ export function createWhySection(content) {
       createContainer([
         createSectionHeader({
           eyebrow: "Why Choose Skyline",
-          title: "Built Around Outcomes, Not Activity",
+          title: "Why Teams Choose Skyline Over Generic Agencies",
           description:
-            "We focus on what moves the business: better conversion paths, disciplined testing, and high-speed execution."
+            "No fluff, no vanity metrics, and no long delays between strategy and execution."
         }),
         createElement("div", {
           className: "card-grid card-grid--three",

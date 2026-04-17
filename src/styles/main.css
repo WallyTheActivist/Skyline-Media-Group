@@ -288,6 +288,14 @@ a {
   background: linear-gradient(180deg, #f9fcff 0%, #edf5ff 100%);
 }
 
+.section--problem {
+  background: linear-gradient(180deg, #eef5ff 0%, #ffffff 100%);
+}
+
+.section--results {
+  background: linear-gradient(180deg, #ffffff 0%, #eef5ff 100%);
+}
+
 .section--deep {
   background: linear-gradient(150deg, #0a2540 0%, #133a60 100%);
 }
@@ -388,6 +396,55 @@ a {
 
 .info-card--portfolio {
   background: linear-gradient(180deg, #ffffff 0%, #f3f8ff 100%);
+}
+
+.info-card--problem {
+  border-color: rgba(10, 37, 64, 0.18);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.info-card--solution {
+  background: #ffffff;
+}
+
+.info-card--results {
+  background: linear-gradient(180deg, #ffffff 0%, #f2f8ff 100%);
+}
+
+.results-metric-grid {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.results-metric {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: #ffffff;
+  box-shadow: var(--shadow-soft);
+  padding: 1.1rem;
+}
+
+.results-metric__value {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.4rem, 2.7vw, 2rem);
+  color: var(--color-primary);
+}
+
+.results-metric__label {
+  margin-top: 0.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.results-metric__detail {
+  margin-top: 0.45rem;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+}
+
+.results-cases {
+  margin-top: 1.1rem;
 }
 
 .process-grid {
@@ -590,6 +647,10 @@ a {
 
   .process-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .results-metric-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .testimonial-grid {

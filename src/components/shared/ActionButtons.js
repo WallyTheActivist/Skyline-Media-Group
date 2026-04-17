@@ -13,9 +13,15 @@ function createActionButton(action, variant = "primary") {
 }
 
 export function createActionGroup(primary, secondary) {
+  const children = [createActionButton(primary)];
+
+  if (secondary) {
+    children.push(createActionButton(secondary, "secondary"));
+  }
+
   return createElement("div", {
     className: "action-group",
-    children: [createActionButton(primary), createActionButton(secondary, "secondary")],
+    children,
     revealDelay: 150
   });
 }
