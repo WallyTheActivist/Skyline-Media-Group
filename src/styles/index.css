@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  background: #ffffff;
+  color: #102a43;
+}
+
+.hero-ambient {
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 120%;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(56, 161, 255, 0.46), transparent 42%),
+    radial-gradient(circle at 80% 16%, rgba(22, 74, 121, 0.72), transparent 38%),
+    radial-gradient(circle at 66% 75%, rgba(28, 116, 217, 0.42), transparent 45%);
+  animation: drift 12s ease-in-out infinite alternate;
+}
+
+.hero-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 100%);
+  opacity: 0.22;
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 1.5rem;
+  background: radial-gradient(circle at top right, rgba(28, 116, 217, 0.5), transparent 45%);
+  opacity: 0;
+  transition: opacity 260ms ease;
+  pointer-events: none;
+}
+
+.service-card:hover::after {
+  opacity: 1;
+}
+
+@keyframes drift {
+  0% {
+    transform: translateY(-3%) scale(1.01);
+  }
+  100% {
+    transform: translateY(4%) scale(1.06);
+  }
+}
