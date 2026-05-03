@@ -1,0 +1,1 @@
+import{j as t}from"./index-CG_whz4i.js";import{P as o}from"./PageHeader-BgK6upXd.js";import{C as e}from"./ContactFormSection-Drvg50cO.js";import"./Reveal-C_uz3aoW.js";function s(){return t.jsxs(t.Fragment,{children:[t.jsx(o,{label:"Contact",title:"Get in Touch",subtitle:"Ready to build your growth machine? Let's talk."}),t.jsx(e,{})]})}export{s as default};
