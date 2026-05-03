@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { cn } from "../../lib/cn";
 
 export default function TiltCard({ children, className = "" }) {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
@@ -24,10 +25,10 @@ export default function TiltCard({ children, className = "" }) {
     <motion.article
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
-      whileHover={{ translateY: -6 }}
+      whileHover={{ translateY: -6, scale: 1.015 }}
       transition={{ type: "spring", stiffness: 260, damping: 18 }}
       style={{ transform: `perspective(1100px) rotateX(${rotate.x}deg) rotateY(${rotate.y}deg)` }}
-      className={`group relative overflow-hidden rounded-3xl border border-white/20 bg-white/80 p-7 shadow-soft backdrop-blur-md transition ${className}`.trim()}
+      className={cn("group card card-service", className)}
     >
       {children}
     </motion.article>

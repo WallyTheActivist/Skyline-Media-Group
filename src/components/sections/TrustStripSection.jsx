@@ -4,27 +4,36 @@ import Reveal from "../ui/Reveal";
 
 export default function TrustStripSection({ content }) {
   return (
-    <SectionShell className="bg-white py-10 md:py-12">
+    <SectionShell className="bg-white py-10 md:py-14">
       <Reveal className="text-center">
-        <p className="text-xs uppercase tracking-[0.22em] text-ink/55">{content.title}</p>
+        <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-ink/30">{content.title}</p>
       </Reveal>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.6 }}
-        transition={{ delay: 0.15, duration: 0.65 }}
-        className="mt-8 grid grid-cols-2 gap-3 text-center sm:grid-cols-3 lg:grid-cols-6"
-      >
-        {content.logos.map((logo) => (
-          <p
-            key={logo}
-            className="rounded-2xl border border-ink/10 bg-mist/40 px-4 py-3 font-display text-sm tracking-[0.08em] text-ink/65"
-          >
-            {logo}
-          </p>
-        ))}
-      </motion.div>
+      {/* Pill grid with fade-out edges on both sides */}
+      <div className="relative mt-7">
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-14 bg-gradient-to-r from-white to-transparent" aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-14 bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
+
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ delay: 0.1, duration: 0.6 }}
+          className="grid grid-cols-3 gap-2.5 lg:grid-cols-6"
+        >
+          {content.logos.map((logo) => (
+            <motion.div
+              key={logo}
+              whileHover={{ y: -2, borderColor: "rgba(28,116,217,0.2)" }}
+              transition={{ type: "spring", stiffness: 300, damping: 22 }}
+              className="flex items-center justify-center rounded-xl border border-ink/[0.07] bg-white px-4 py-3.5 shadow-[0_1px_4px_rgba(0,0,0,0.05)]"
+            >
+              <p className="font-display text-[12px] font-semibold tracking-[0.1em] text-ink/38">{logo}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </SectionShell>
   );
 }
+

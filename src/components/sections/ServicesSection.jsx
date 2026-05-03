@@ -1,31 +1,46 @@
 import SectionShell from "../layout/SectionShell";
 import Reveal from "../ui/Reveal";
-import TiltCard from "../ui/TiltCard";
-import IconBadge from "../ui/IconBadge";
+import ServiceCard from "../ui/ServiceCard";
+
+const defaultServices = [
+  {
+    icon: "website",
+    title: "Website Development",
+    description: "Build fast, conversion-focused websites that turn visitors into qualified leads."
+  },
+  {
+    icon: "ads",
+    title: "Paid Advertising",
+    description: "Launch targeted paid campaigns that lower CAC and scale revenue with measurable ROAS."
+  },
+  {
+    icon: "social",
+    title: "Social Media Management",
+    description: "Grow authority and demand with consistent social content that drives intent and action."
+  }
+];
 
 export default function ServicesSection({ content }) {
+  const services = content?.items?.length ? content.items : defaultServices;
+
   return (
-    <SectionShell id="services" className="bg-[linear-gradient(180deg,#f7fbff_0%,#ffffff_100%)]">
+    <SectionShell id="services" tone="soft" parallax>
       <Reveal>
-        <p className="text-xs uppercase tracking-[0.22em] text-azure">Services</p>
+        <p className="section-kicker">Services</p>
       </Reveal>
       <Reveal delay={0.08}>
-        <h2 className="mt-4 max-w-[18ch] font-display text-[clamp(2.2rem,5.1vw,4.4rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-navy">
-          {content.title}
+        <h2 className="section-title">
+          {content?.title ?? "Services built for growth"}
         </h2>
       </Reveal>
       <Reveal delay={0.16}>
-        <p className="mt-5 max-w-3xl text-lg text-ink/70">{content.subtitle}</p>
+        <p className="section-copy">{content?.subtitle ?? "Website, ads, and social systems that work together to convert traffic into revenue."}</p>
       </Reveal>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
-        {content.items.map((item, index) => (
+        {services.map((item, index) => (
           <Reveal key={item.title} delay={0.1 + index * 0.1}>
-            <TiltCard className="service-card">
-              <IconBadge icon={item.icon} />
-              <h3 className="mt-6 font-display text-2xl font-semibold tracking-tight text-navy">{item.title}</h3>
-              <p className="mt-4 text-ink/70">{item.description}</p>
-            </TiltCard>
+            <ServiceCard icon={item.icon} title={item.title} description={item.description} />
           </Reveal>
         ))}
       </div>

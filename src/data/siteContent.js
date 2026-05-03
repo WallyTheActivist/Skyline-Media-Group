@@ -1,16 +1,17 @@
 export const siteContent = {
   brand: "Skyline Media Group",
   navLinks: [
-    { label: "Services", href: "#services" },
-    { label: "Case Studies", href: "#case-studies" },
-    { label: "Process", href: "#process" },
-    { label: "Why Skyline", href: "#why-skyline" }
+    { label: "Services", href: "/services" },
+    { label: "Work", href: "/work" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" }
   ],
   hero: {
-    headline: "We Don't Just Build Websites. We Build Growth Systems.",
+    headline: "We Build Growth Systems. Not Just Websites.",
     subtext:
-      "Skyline Media Group helps brands scale through high-performance websites, ads, and social media.",
-    cta: { label: "Start Your Growth", href: "#final-cta" },
+      "Websites, Ads, and Social Media designed to convert traffic into revenue.",
+    cta: { label: "Start Your Growth", href: "/contact" },
+    ctaSecondary: { label: "View Work", href: "/work" },
     stats: [
       { value: "+120%", label: "Average Conversion Lift" },
       { value: "-31%", label: "Wasted Ad Spend" },
@@ -45,26 +46,41 @@ export const siteContent = {
     ]
   },
   caseStudies: {
-    title: "Proof, not promises",
-    subtitle: "Hover each project to reveal measurable outcomes.",
+    title: "Proof, not promises.",
+    subtitle: "Every number below is a real outcome from a real client.",
     projects: [
       {
         title: "Apex Commerce",
         domain: "Ecommerce",
-        summary: "Storefront redesign + paid social system",
-        result: "+120% conversions"
+        tag: "Conversion Overhaul",
+        metrics: [
+          { value: "+120%", label: "Conversions" },
+          { value: "+80%", label: "ROI" }
+        ],
+        gradient: "linear-gradient(160deg,#1a0a00 0%,#3d1a00 40%,#0a0f1e 100%)",
+        accentColor: "#f97316"
       },
       {
         title: "Northwell Clinic",
         domain: "Healthcare",
-        summary: "Lead funnel rebuild + local demand generation",
-        result: "-34% cost per booked call"
+        tag: "Lead Generation",
+        metrics: [
+          { value: "-34%", label: "Cost Per Lead" },
+          { value: "+2.8x", label: "Booked Calls" }
+        ],
+        gradient: "linear-gradient(160deg,#001a1f 0%,#003d4d 40%,#060d1a 100%)",
+        accentColor: "#22d3ee"
       },
       {
         title: "Summit Capital",
         domain: "B2B Finance",
-        summary: "Demand capture pages + paid search optimization",
-        result: "3.2x qualified lead volume"
+        tag: "Demand Capture",
+        metrics: [
+          { value: "3.2x", label: "Qualified Leads" },
+          { value: "+91%", label: "Pipeline Value" }
+        ],
+        gradient: "linear-gradient(160deg,#050a1a 0%,#0a1a3d 40%,#0c0a00 100%)",
+        accentColor: "#eab308"
       }
     ]
   },
@@ -100,8 +116,14 @@ export const siteContent = {
     ]
   },
   finalCta: {
-    title: "Let's Build Your Growth Machine",
-    body: "If your current funnel is underperforming, Skyline will map, build, and optimize a system that converts.",
-    cta: { label: "Book a Free Strategy Call", href: "mailto:hello@skylinemediagroup.com" }
+    title: "Ready to stop leaking revenue?",
+    body: "Book a 30-minute call. We'll walk through your current funnel, identify the exact gaps, and show you a path to more leads within 30 days — no fluff.",
+    cta: { label: "Book My Strategy Call", href: "/contact" }
+  },
+  midCta: {
+    kicker: "No commitment required",
+    headline: "Want results like these for your business?",
+    subtext: "We'll audit your current funnel and tell you exactly where you're losing revenue — delivered within 48 hours.",
+    cta: { label: "Claim Your Free Audit", href: "/contact" }
   }
 };
