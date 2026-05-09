@@ -87,13 +87,13 @@ export default function HeroSection({ content }) {
   };
 
   return (
-    <header className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_8%_14%,rgba(34,211,238,0.24),transparent_34%),radial-gradient(circle_at_88%_16%,rgba(30,58,138,0.38),transparent_44%),linear-gradient(135deg,#06192e_0%,#0a2540_52%,#102a43_100%)] text-white">
+    <header className="relative min-h-[100svh] overflow-hidden bg-[radial-gradient(circle_at_8%_14%,rgba(34,211,238,0.24),transparent_34%),radial-gradient(circle_at_88%_16%,rgba(30,58,138,0.38),transparent_44%),linear-gradient(135deg,#06192e_0%,#0a2540_52%,#102a43_100%)] text-white">
       <div className="hero-ambient" aria-hidden="true" />
       <div className="hero-grid-overlay" aria-hidden="true" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#060f1d]/45" aria-hidden="true" />
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-[min(1200px,92vw)] items-center py-24">
-        <div className="grid w-full items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] w-[min(1200px,92vw)] items-center pt-28 pb-16 lg:py-24">
+        <div className="grid w-full items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <motion.div variants={textContainer} initial="hidden" animate="show">
             <motion.p variants={textItem} className="mb-7 inline-flex items-center gap-2.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/45">
               <span className="h-px w-5 flex-shrink-0 bg-current" aria-hidden="true" />
@@ -117,18 +117,18 @@ export default function HeroSection({ content }) {
               </Button>
             </motion.div>
 
-            <motion.div variants={textItem} className="mt-9 grid max-w-xl grid-cols-3 gap-3">
-              <div className="rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3.5 backdrop-blur-sm">
-                <p className="font-display text-[clamp(1.4rem,2.2vw,1.75rem)] font-bold leading-none tracking-tight">+120%</p>
-                <p className="mt-1.5 text-[10px] font-medium uppercase tracking-[0.14em] text-white/45">Conversion lift</p>
+            <motion.div variants={textItem} className="mt-9 grid max-w-xl grid-cols-3 gap-2 sm:gap-3">
+              <div className="rounded-xl border border-white/10 bg-white/[0.06] px-3 py-3 sm:px-4 sm:py-3.5 backdrop-blur-sm">
+                <p className="font-display text-[clamp(1.25rem,2.2vw,1.75rem)] font-bold leading-none tracking-tight">+120%</p>
+                <p className="mt-1.5 text-[9px] sm:text-[10px] font-medium uppercase tracking-[0.14em] text-white/45">Conversion lift</p>
               </div>
-              <div className="rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3.5 backdrop-blur-sm">
-                <p className="font-display text-[clamp(1.4rem,2.2vw,1.75rem)] font-bold leading-none tracking-tight">3.4×</p>
-                <p className="mt-1.5 text-[10px] font-medium uppercase tracking-[0.14em] text-white/45">Average ROAS</p>
+              <div className="rounded-xl border border-white/10 bg-white/[0.06] px-3 py-3 sm:px-4 sm:py-3.5 backdrop-blur-sm">
+                <p className="font-display text-[clamp(1.25rem,2.2vw,1.75rem)] font-bold leading-none tracking-tight">3.4×</p>
+                <p className="mt-1.5 text-[9px] sm:text-[10px] font-medium uppercase tracking-[0.14em] text-white/45">Average ROAS</p>
               </div>
-              <div className="rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3.5 backdrop-blur-sm">
-                <p className="font-display text-[clamp(1.4rem,2.2vw,1.75rem)] font-bold leading-none tracking-tight">−31%</p>
-                <p className="mt-1.5 text-[10px] font-medium uppercase tracking-[0.14em] text-white/45">Wasted spend</p>
+              <div className="rounded-xl border border-white/10 bg-white/[0.06] px-3 py-3 sm:px-4 sm:py-3.5 backdrop-blur-sm">
+                <p className="font-display text-[clamp(1.25rem,2.2vw,1.75rem)] font-bold leading-none tracking-tight">−31%</p>
+                <p className="mt-1.5 text-[9px] sm:text-[10px] font-medium uppercase tracking-[0.14em] text-white/45">Wasted spend</p>
               </div>
             </motion.div>
           </motion.div>
@@ -139,7 +139,7 @@ export default function HeroSection({ content }) {
             transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
             onMouseMove={handleParallaxMove}
             onMouseLeave={handleParallaxLeave}
-            className="relative mx-auto w-full max-w-[560px]"
+            className="relative mx-auto hidden w-full max-w-[560px] lg:block"
           >
             <div className="pointer-events-none absolute -left-10 top-10 h-36 w-36 rounded-full bg-accent-cyan/22 blur-3xl" />
             <div className="pointer-events-none absolute -right-8 bottom-8 h-44 w-44 rounded-full bg-brand-secondary/24 blur-3xl" />
